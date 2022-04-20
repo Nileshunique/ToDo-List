@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+}
+html {
+  background-color: #d5ddfa;
+  background-image: -webkit-linear-gradient(65deg, #a683e3 50%, #d5ddfa 50%);
+  min-height: 1000px;
+}
+body {
+  /* background-image: -webkit-linear-gradient(to bottom, pink 50%, white 50%); */
+  height: 90vh;
+}
+.container {
+  width: 500px;
+  margin: 50px auto 0;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.newItemBox {
+  padding: 15px;
+  box-shadow: 5px 10px 10px #ccc;
+  margin-bottom: 50px;
+}
+.newItemBox h3 {
+  margin-bottom: 15px;
+}
+.newListForm {
+  display: flex;
+  flex-direction: row;
+}
+.newListForm input {
+  flex: 40%;
+  margin-right: 5px;
+  padding: 0 10px;
+}
+.addListItemButton {
+  width: 60px;
+  padding: 5px 0;
+  text-align: center;
+  background-color: #a683e3;
+  color: white;
+  cursor: pointer;
+}
+.listBox li {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: #ccc;
+}
+.listBox li:first-child {
+  border-top: 1px solid #ccc;
+  border-radius: 5px 5px 0 0;
+}
+.listBox li:last-child {
+  border-radius: 0 0 5px 5px;
+}
+.listBox li * {
+  margin: 5px;
+}
+.listItem {
+  text-align: justify;
+}
+.edit,
+.delete {
+  color: #a683e3;
+}
+input[type="checkbox"]:checked {
+  color: red;
+}
+.done {
+  text-decoration: line-through;
+  color: red;
+}
+button {
+  border: none;
+  border-radius: 5px;
+}

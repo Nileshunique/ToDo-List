@@ -1,0 +1,20 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "This is a ToDoList Web Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Nilesh Kumar",
+  "license": "ISC",
+  "engines": {
+    "node": "16.14.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "ejs": "^3.1.7",
+    "express": "^4.17.3",
+    "mongodb": "^4.5.0"
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://www.favicon.cc/logo3d/179567.png">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form class="newItemBox" action="/" method="post">
+            <h3>New Todo:</h3>
+            <div class="newListForm">
+                <input class="newListItem" type="text" name="toDo" placeholder="List Item" autofocus>
+                <button class="addListItemButton" type="submit">Add</button>
+            </div>
+        </form>
+        <form action="/delete" method="post">
+            <ul class="listBox">
+                <% list.forEach((list)=> { %>
+                    <li>
+                        <span class="list">
+                            <input type="checkbox" name="done" value="<%= list._id %>" id="done"
+                                onchange="this.form.submit()">
+                            <span class="listItem <%= list.class %>">
+                                <%=list.toDo %>
+                            </span>
+                        </span>
+                        <span class="icon">
+                            <%# <i class="fa-solid fa-pen edit"></i> %>
+                                <button class="fa-solid fa-trash-can delete" name="delete" value="<%= list._id %>"
+                                    onclick="this.form.submit()"></button>
+                        </span>
+                    </li>
+                    <% }) %>
+            </ul>
+        </form>
+    </div>
+</body>
+
+</html>
